@@ -1,0 +1,21 @@
+services:
+  mf-host:
+    build:
+      context: mf-host
+      dockerfile: ../Dockerfile
+    ports:
+      - 3000:3000
+  
+  mf-profile:
+    build:
+      context: mf-profile
+      dockerfile: ../Dockerfile
+    ports:
+      - 3001:3001
+
+  mf-place:
+    build:
+      context: mf-place
+      dockerfile: ../Dockerfile
+    ports:
+      - 3002:3002
