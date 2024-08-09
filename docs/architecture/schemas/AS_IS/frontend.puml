@@ -1,0 +1,25 @@
+@startuml
+class Auth {
+        email
+        password
+        token
+    }
+
+    class User {
+        id
+        name
+        about
+        avatar
+    }
+
+    class Card {
+        name
+        likes
+        owner
+    }
+
+    Card::owner -|> User::id
+    Card::likes -|> User::id
+    Auth::token -|> User
+    Auth::token -|> Card
+@enduml
